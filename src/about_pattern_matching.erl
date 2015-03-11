@@ -23,7 +23,7 @@ branching_on_patterns() ->
     end.
 
 sometimes_we_do_not_need_to_know_everything() ->
-    Fruits = {__, banana},
+    Fruits = {apple, banana},
     case Fruits of
         {apple, _} ->
             get_here
@@ -36,10 +36,10 @@ and_sometimes_we_dont_need_to_match_anything() ->
         _ ->
             Answer = anything
     end,
-    __ =:= Answer.
+    anything =:= Answer.
 
 we_can_find_patterns_in_arguments() ->
-    match_the_argument(__).
+    match_the_argument(bar).
 
 match_the_argument(foo) ->
     wrong;
